@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bien te vi Manaus</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    
+
+<!-- 🌊 FUNDO -->
+<div class="river-bg"></div>
+
+<!-- ✨ VAGA-LUMES -->
+<canvas id="fireflies"></canvas>
+
+<!-- 🎥 TRAILER -->
+<section class="trailer">
+  <video autoplay muted loop id="bgVideo">
+    <source src="video/manaus.mp4" type="video/mp4">
+  </video>
+
+  <div class="trailer-overlay">
+    <h1>Bien te vi Manaus</h1>
+    <p>Uma jornada sonora pela alma da Amazônia</p>
+    <button onclick="scrollToPlayer()">▶ Ouvir agora</button>
+  </div>
+</section>
+
+<!-- 🎧 PLAYER -->
+<section class="player-section">
+  <h2>🎧 Player</h2>
+
+  <div class="player">
+    <img id="cover" src="img/capa_bientevi_manaus.png" alt="Capa do álbum">
+    <div class="controls">
+      <button id="playBtn">▶</button>
+      <button id="ambientBtn">🌿</button>
+    </div>
+
+    <div class="track-info">
+      <span id="trackTitle">Selecione uma música</span>
+    </div>
+
+    <div class="progress-container" id="progressContainer">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="time">
+      <span id="currentTime">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+
+    <audio id="audio"></audio>
+    <audio id="ambient" loop src="audio/floresta.mp3"></audio>
+  </div>
+
+  <!-- 🧠 STORY -->
+  <div class="story-box">
+    <p id="storyText">Selecione uma música para ver a história</p>
+    <button onclick="nextStory()">Próximo</button>
+  </div>
+
+</section>
+
+<!-- 🎼 FAIXAS -->
+<section class="tracks" id="trackList"></section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
